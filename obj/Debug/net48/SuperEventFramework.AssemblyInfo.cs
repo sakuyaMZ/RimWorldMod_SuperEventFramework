@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SuperEventFramework")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+18892e2a089265470a9a2903201c8ac7ab1af385")]
 [assembly: System.Reflection.AssemblyProductAttribute("SuperEventFramework")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SuperEventFramework")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

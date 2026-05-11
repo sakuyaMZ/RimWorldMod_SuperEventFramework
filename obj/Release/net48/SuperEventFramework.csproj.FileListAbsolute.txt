@@ -1,9 +1,0 @@
-D:\rimworldMod\superEvent\bin\Release\net48\SuperEventFramework.dll
-D:\rimworldMod\superEvent\bin\Release\net48\SuperEventFramework.pdb
-D:\rimworldMod\superEvent\obj\Release\net48\SuperEventFramework.csproj.AssemblyReference.cache
-D:\rimworldMod\superEvent\obj\Release\net48\SuperEventFramework.GeneratedMSBuildEditorConfig.editorconfig
-D:\rimworldMod\superEvent\obj\Release\net48\SuperEventFramework.AssemblyInfoInputs.cache
-D:\rimworldMod\superEvent\obj\Release\net48\SuperEventFramework.AssemblyInfo.cs
-D:\rimworldMod\superEvent\obj\Release\net48\SuperEventFramework.csproj.CoreCompileInputs.cache
-D:\rimworldMod\superEvent\obj\Release\net48\SuperEventFramework.dll
-D:\rimworldMod\superEvent\obj\Release\net48\SuperEventFramework.pdb
