@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+  SuperEventSettingsDefs.xml - 超事件框架全局设置定义
+  这个文件包含框架的全局配置，所有事件共享这些设置
+  修改这个文件就可以调整默认图片和图片尺寸大小配置，无需修改C#代码
+-->
+<Defs>
+  <!-- 超事件框架全局设置 -->
+  <SuperEventFramework.SuperEventSettingsDef>
+    <defName>SuperEventFramework_Settings</defName>
+    <label>超事件框架设置</label>
+    <description>超事件框架的全局配置设置</description>
+    
+    <!-- 默认图片路径（当事件没有指定图片或图片加载失败时使用） -->
+    <defaultImgPath>UI/Events/defaultImg</defaultImgPath>
+    
+    <!-- 图片显示配置 -->
+    <imgWidth>600</imgWidth>
+    <imgHeight>400</imgHeight>
+    
+  </SuperEventFramework.SuperEventSettingsDef>
+</Defs>

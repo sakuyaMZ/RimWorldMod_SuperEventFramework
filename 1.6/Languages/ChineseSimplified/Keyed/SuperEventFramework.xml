@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+  <!-- 设置界面 -->
+  <SuperEventFramework.BgmText>窗口关闭后停止BGM</SuperEventFramework.BgmText>
+  <SuperEventFramework.StopBGMOnCloseDesc>取消勾选后，关闭事件窗口时会立即停止背景音乐播放</SuperEventFramework.StopBGMOnCloseDesc>
+  
+  <SuperEventFramework.GlobalBlocker>全局屏蔽</SuperEventFramework.GlobalBlocker>
+  <SuperEventFramework.GlobalBlockerDesc>勾选后将屏蔽所有超事件的触发</SuperEventFramework.GlobalBlockerDesc>
+  <SuperEventFramework.ToggleGlobalBlock>点击切换全局屏蔽状态</SuperEventFramework.ToggleGlobalBlock>
+  
+  <SuperEventFramework.SaveRecords>本存档触发记录</SuperEventFramework.SaveRecords>
+  <SuperEventFramework.SaveRecordsDesc>清除当前存档中所有&quot;本档一次&quot;事件的触发状态</SuperEventFramework.SaveRecordsDesc>
+  <SuperEventFramework.GlobalRecords>全局触发记录</SuperEventFramework.GlobalRecords>
+  <SuperEventFramework.GlobalRecordsDesc>清除所有存档中所有&quot;全局一次&quot;事件的触发状态</SuperEventFramework.GlobalRecordsDesc>
+  
+  <SuperEventFramework.Clear>清除</SuperEventFramework.Clear>
+  <SuperEventFramework.SaveRecordsCleared>已清除本存档触发记录</SuperEventFramework.SaveRecordsCleared>
+  <SuperEventFramework.GlobalRecordsCleared>已清除全局触发记录</SuperEventFramework.GlobalRecordsCleared>
+  
+  <SuperEventFramework.NeedInSave>此操作需要在游戏存档中才可生效</SuperEventFramework.NeedInSave>
+  
+  <SuperEventFramework.ConfirmClearSaveRecords>确定要清除本存档中所有事件的触发记录吗？</SuperEventFramework.ConfirmClearSaveRecords>
+  <SuperEventFramework.ConfirmClearGlobalRecords>确定要清除所有存档中全局事件的触发记录吗？此操作不可撤销。</SuperEventFramework.ConfirmClearGlobalRecords>
+  
+  <SuperEventFramework.EventSettings>事件设置</SuperEventFramework.EventSettings>
+  
+  <!-- 触发模式 -->
+  <SuperEventFramework.TriggerMode_Unlimited>一直触发</SuperEventFramework.TriggerMode_Unlimited>
+  <SuperEventFramework.TriggerMode_PerSaveOnce>本档一次</SuperEventFramework.TriggerMode_PerSaveOnce>
+  <SuperEventFramework.TriggerMode_GlobalOnce>全局一次</SuperEventFramework.TriggerMode_GlobalOnce>
+  <SuperEventFramework.TriggerMode_None>不触发</SuperEventFramework.TriggerMode_None>
+  
+  <!-- 状态显示 -->
+  <SuperEventFramework.Triggered>已触发</SuperEventFramework.Triggered>
+  <SuperEventFramework.NotTriggered>未触发</SuperEventFramework.NotTriggered>
+  <SuperEventFramework.Selected>已选</SuperEventFramework.Selected>
+  <SuperEventFramework.NotSelected>未选</SuperEventFramework.NotSelected>
+  
+  <!-- 按钮文本 -->
+  <SuperEventFramework.TestTrigger>▶ 测试</SuperEventFramework.TestTrigger>
+  <SuperEventFramework.ConfirmClear>确认清除</SuperEventFramework.ConfirmClear>
+  <SuperEventFramework.ToggleSaveState>点击切换存档触发状态</SuperEventFramework.ToggleSaveState>
+  <SuperEventFramework.ToggleGlobalState>点击切换全局触发状态</SuperEventFramework.ToggleGlobalState>
+  <SuperEventFramework.SelectEvent>点击选择超事件</SuperEventFramework.SelectEvent>
+  <SuperEventFramework.ToggleBlock>点击切换屏蔽状态</SuperEventFramework.ToggleBlock>
+  
+  <!-- 行内文字 -->
+  <SuperEventFramework.SaveStateLabel>存档内已触发</SuperEventFramework.SaveStateLabel>
+  <SuperEventFramework.GlobalStateLabel>全局已触发</SuperEventFramework.GlobalStateLabel>
+  <SuperEventFramework.BlockLabel>该事件允许触发</SuperEventFramework.BlockLabel>
+  <SuperEventFramework.SourceLabel>来源:</SuperEventFramework.SourceLabel>
+  <SuperEventFramework.DependencyLabel>依赖:</SuperEventFramework.DependencyLabel>
+  <SuperEventFramework.VolumeLabel>音量</SuperEventFramework.VolumeLabel>
+  
+  <!-- 无事件 -->
+  <SuperEventFramework.NoEventsAvailable>暂无可用事件</SuperEventFramework.NoEventsAvailable>
+</LanguageData>

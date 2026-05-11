@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <!-- Example Super Event -->
+  <SuperEvent.ExampleSuperEvent_Title>Example Title Blah Blah</SuperEvent.ExampleSuperEvent.Title>
+  <SuperEvent.ExampleSuperEvent_Desc>Example description text content, blah blah</SuperEvent.ExampleSuperEvent.Desc>
+  <SuperEvent.ExampleSuperEvent_Btn>Example Button Text Content, Blah Blah</SuperEvent.ExampleSuperEvent.Btn>
+  
+  <!-- Nuclear War Event -->
+  <SuperEvent.NuclearWar.Title>Total Nuclear War</SuperEvent.NuclearWar.Title>
+  <SuperEvent.NuclearWar.Desc>A second sun slowly rises in the sky — after that, only endless night remains.</SuperEvent.NuclearWar.Desc>
+  <SuperEvent.NuclearWar.Btn>There is nothing left to observe.</SuperEvent.NuclearWar.Btn>
+  
+  <!-- Little Moelotl Seeking Master Event -->
+  <SuperEvent.MoelotlApprenticeLetter.Title>Little Moelotl Seeking Master</SuperEvent.MoelotlApprenticeLetter.Title>
+  <SuperEvent.MoelotlApprenticeLetter.Desc>Could the master be a foreign Taoist Master?</SuperEvent.MoelotlApprenticeLetter.Desc>
+  <SuperEvent.MoelotlApprenticeLetter.Btn>A foreign Taoist Master has the skills and strength to fight the Flying Jiangshi.</SuperEvent.MoelotlApprenticeLetter.Btn>
+  
+  <!-- Golden Cube Event -->
+  <SuperEvent.GoldenCube.Title>WTF the golden…</SuperEvent.GoldenCube.Title>
+  <SuperEvent.GoldenCube.Desc>The golden cube, my golden cube. Hehehe, so many golden cubes. Golden cube golden cube golden cube golden cube golden cube golden cube golden cube… Golden cube? WHERE'S MY GOLDEN CUBE?!</SuperEvent.GoldenCube.Desc>
+  <SuperEvent.GoldenCube.Btn>Where did you hide my golden cube?! Give it back!</SuperEvent.GoldenCube.Btn>
+  
+</LanguageData>

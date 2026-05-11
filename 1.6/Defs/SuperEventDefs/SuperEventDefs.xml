@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+  SuperEventDefs.xml - 超事件定义文件
+  RimWorld会自动加载Defs文件夹中的所有XML文件
+  每个<Defs>标签可以包含多个Def定义
+-->
+<Defs>
+  <!-- 示例超事件定义：任务完成事件 -->
+  <SuperEventFramework.SuperEventDef>
+    <!-- 事件定义的唯一名称 -->
+    <defName>ExampleSuperEvent</defName>
+    
+    <!-- 
+      触发事件的ID，对应游戏内信件的defName的本地化前的key
+      例如：当信件的标题Label为ExampleEventId.Translated()时，即本地化后的文本时触发此事件
+      注意：可能存在多个triggerEventId本地化后是同一个文本，这时候默认触发最后读取到的
+      以及，信件的标题Label必须得是固定的，如果是包含动态变量的就不行了
+    -->
+    <triggerEventId>ExampleEventId</triggerEventId>
+    
+    <!--
+      标题，描述和按钮文本在此处的tag和实际的本地化后的文本最好都得有
+      缺少tag会返回空文本
+      缺少本地化文本会返回原始tag
+      如果按钮文本返回的为空，则不显示下方按钮，转而显示右上角的关闭按钮
+    -->
+
+    <!-- 事件窗口中显示的标题 -->
+    <!-- 中文: 示例标题，巴拉巴拉 -->
+    <!-- EN: Example Title Blah Blah -->
+    <title>SuperEvent.ExampleSuperEvent.Title</title>
+    
+    <!-- 事件窗口中显示的描述文本 -->
+    <!-- 中文: 示例描述，巴拉巴拉 -->
+    <!-- EN: Example description text content, blah blah -->
+    <desc>SuperEvent.ExampleSuperEvent.Desc</desc>
+
+
+
+    <!-- 事件窗口中显示的按钮文本 -->
+    <!-- 中文: 示例按钮，巴拉巴拉 -->
+    <!-- EN: Example Button Text Content, Blah Blah -->
+    <btnText>SuperEvent.ExampleSuperEvent.Btn</btnText>
+    
+    <!-- 
+      事件图片路径（相对于Mod文件夹）
+      格式：UI/Events/图片文件名（不需要扩展名）
+      支持PNG、JPG格式
+    -->
+    <imagePath></imagePath>
+    
+    <!-- 
+      背景音乐路径（相对于Mod文件夹）
+      格式：Audio/Events/音乐文件名（不需要扩展名）
+      支持OGG、WAV格式
+    -->
+    <bgmPath></bgmPath>
+    
+    <!--
+      默认触发模式：PerSaveOnce
+      Unlimited=无限次，PerSaveOnce=每个存档一次，GlobalOnce=全局一次，None=永不触发
+    -->
+    <defaultTriggerMode>GlobalOnce</defaultTriggerMode>
+
+    <!-- 
+      所需的Mod或DLC名称，用于指定事件在哪个Mod或DLC中生效
+      填对应mod的packageId
+      目前来看只是个方便定位用的
+    -->
+    <requiredModOrDlc></requiredModOrDlc>
+
+  </SuperEventFramework.SuperEventDef>
+  
+  <!-- 示例超事件定义：全面核战争 -->
+  <SuperEventFramework.SuperEventDef>
+    <defName>NuclearWar</defName>
+    <triggerEventId>IRBM_NuclearWar.label</triggerEventId>
+    <title>SuperEvent.NuclearWar.Title</title>
+    <desc>SuperEvent.NuclearWar.Desc</desc>
+    <btnText>SuperEvent.NuclearWar.Btn</btnText>
+    <imagePath>UI/Events/NuclearWar</imagePath>
+    <bgmPath>Events/NuclearWar</bgmPath>
+    <defaultTriggerMode>PerSaveOnce</defaultTriggerMode>
+    <requiredModOrDlc>kazepsi.irbm</requiredModOrDlc>
+  </SuperEventFramework.SuperEventDef>
+
+  <!-- 示例超事件定义：小螈拜师 -->
+  <SuperEventFramework.SuperEventDef>
+    <defName>MoelotlApprenticeLetter</defName>
+    <triggerEventId>RiM.ApprenticeLetter</triggerEventId>
+    <title>SuperEvent.MoelotlApprenticeLetter.Title</title>
+    <desc>SuperEvent.MoelotlApprenticeLetter.Desc</desc>
+    <btnText>SuperEvent.MoelotlApprenticeLetter.Btn</btnText>
+    <imagePath>UI/Events/MoelotlApprenticeLetter</imagePath>
+    <bgmPath>Events/MoelotlApprenticeLetter</bgmPath>
+    <defaultTriggerMode>PerSaveOnce</defaultTriggerMode>
+    <requiredModOrDlc>fxz.moelotlzombie.update</requiredModOrDlc>
+  </SuperEventFramework.SuperEventDef>
+
+  <!-- 示例超事件定义：金色魔方 -->
+  <SuperEventFramework.SuperEventDef>
+    <defName>GoldenCube</defName>
+    <triggerEventId>GoldenCubeArrivalLabel</triggerEventId>
+    <title>SuperEvent.GoldenCube.Title</title>
+    <desc>SuperEvent.GoldenCube.Desc</desc>
+    <btnText>SuperEvent.GoldenCube.Btn</btnText>
+    <imagePath>UI/Events/GoldenCube</imagePath>
+    <bgmPath>Events/GoldenCube</bgmPath>
+    <defaultTriggerMode>PerSaveOnce</defaultTriggerMode>
+    <requiredModOrDlc>ludeon.rimworld.anomaly</requiredModOrDlc>
+  </SuperEventFramework.SuperEventDef>
+</Defs>

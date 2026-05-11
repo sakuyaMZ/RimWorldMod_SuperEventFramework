@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <!-- 示例超事件 -->
+  <SuperEvent.ExampleSuperEvent.Title>示例标题，巴拉巴拉</SuperEvent.ExampleSuperEvent.Title>
+  <SuperEvent.ExampleSuperEvent.Desc>示例文本描述内容，巴拉巴拉</SuperEvent.ExampleSuperEvent.Desc>
+  <SuperEvent.ExampleSuperEvent.Btn>示例按钮文本内容，巴拉巴拉</SuperEvent.ExampleSuperEvent.Btn>
+  
+  <!-- 全面核战争事件 -->
+  <SuperEvent.NuclearWar.Title>全面核战</SuperEvent.NuclearWar.Title>
+  <SuperEvent.NuclearWar.Desc>第二个太阳在空中缓缓升起，此后便是无尽的黑夜</SuperEvent.NuclearWar.Desc>
+  <SuperEvent.NuclearWar.Btn>已经没有什么好观察的了</SuperEvent.NuclearWar.Btn>
+  
+  <!-- 小螈拜师事件 -->
+  <SuperEvent.MoelotlApprenticeLetter.Title>小螈拜师</SuperEvent.MoelotlApprenticeLetter.Title>
+  <SuperEvent.MoelotlApprenticeLetter.Desc>难不成师傅是外籍道长？</SuperEvent.MoelotlApprenticeLetter.Desc>
+  <SuperEvent.MoelotlApprenticeLetter.Btn>外籍道长有的是手段和力气跟飞僵斗</SuperEvent.MoelotlApprenticeLetter.Btn>
+
+  <!-- 金色魔方事件 -->
+  <SuperEvent.GoldenCube.Title>神金</SuperEvent.GoldenCube.Title>
+  <SuperEvent.GoldenCube.Desc>金色魔方，我的金色魔方。嘿嘿嘿，有好多的金色魔方。金色魔方金色魔方金色魔方金色魔方金色魔方金色魔方金色魔方……金色魔方？我的金色魔方呢！</SuperEvent.GoldenCube.Desc>
+  <SuperEvent.GoldenCube.Btn>你把金色魔方藏哪了！还给我！</SuperEvent.GoldenCube.Btn>
+</LanguageData>

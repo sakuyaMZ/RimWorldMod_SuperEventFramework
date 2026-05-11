@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+  <!-- Settings UI -->
+  <SuperEventFramework.BgmText>Stop BGM when window closes</SuperEventFramework.BgmText>
+  <SuperEventFramework.StopBGMOnCloseDesc>If unchecked, the background music will stop immediately when the event window is closed.</SuperEventFramework.StopBGMOnCloseDesc>
+  
+  <SuperEventFramework.GlobalBlocker>Global Blocker</SuperEventFramework.GlobalBlocker>
+  <SuperEventFramework.GlobalBlockerDesc>Check to block all super events from triggering.</SuperEventFramework.GlobalBlockerDesc>
+  <SuperEventFramework.ToggleGlobalBlock>Click to toggle global block</SuperEventFramework.ToggleGlobalBlock>
+  
+  <SuperEventFramework.SaveRecords>Save Records</SuperEventFramework.SaveRecords>
+  <SuperEventFramework.SaveRecordsDesc>Clear all &quot;Per Save Once&quot; trigger records in the current save.</SuperEventFramework.SaveRecordsDesc>
+  <SuperEventFramework.GlobalRecords>Global Records</SuperEventFramework.GlobalRecords>
+  <SuperEventFramework.GlobalRecordsDesc>Clear all &quot;Global Once&quot; trigger records across all saves.</SuperEventFramework.GlobalRecordsDesc>
+  
+  <SuperEventFramework.Clear>Clear</SuperEventFramework.Clear>
+  <SuperEventFramework.SaveRecordsCleared>Save trigger records cleared.</SuperEventFramework.SaveRecordsCleared>
+  <SuperEventFramework.GlobalRecordsCleared>Global trigger records cleared.</SuperEventFramework.GlobalRecordsCleared>
+  
+  <SuperEventFramework.NeedInSave>This action requires an active save game.</SuperEventFramework.NeedInSave>
+  
+  <SuperEventFramework.ConfirmClearSaveRecords>Are you sure you want to clear all save trigger records?</SuperEventFramework.ConfirmClearSaveRecords>
+  <SuperEventFramework.ConfirmClearGlobalRecords>Are you sure you want to clear all global trigger records? This cannot be undone.</SuperEventFramework.ConfirmClearGlobalRecords>
+  
+  <SuperEventFramework.EventSettings>Event Settings</SuperEventFramework.EventSettings>
+  
+  <!-- Trigger Mode -->
+  <SuperEventFramework.TriggerMode_Unlimited>Unlimited</SuperEventFramework.TriggerMode_Unlimited>
+  <SuperEventFramework.TriggerMode_PerSaveOnce>Per Save Once</SuperEventFramework.TriggerMode_PerSaveOnce>
+  <SuperEventFramework.TriggerMode_GlobalOnce>Global Once</SuperEventFramework.TriggerMode_GlobalOnce>
+  <SuperEventFramework.TriggerMode_None>Never</SuperEventFramework.TriggerMode_None>
+  
+  <!-- Status -->
+  <SuperEventFramework.Triggered>Triggered</SuperEventFramework.Triggered>
+  <SuperEventFramework.NotTriggered>Not Triggered</SuperEventFramework.NotTriggered>
+  <SuperEventFramework.Selected>Selected</SuperEventFramework.Selected>
+  <SuperEventFramework.NotSelected>Not Selected</SuperEventFramework.NotSelected>
+  
+  <!-- Buttons -->
+  <SuperEventFramework.TestTrigger>▶ Test</SuperEventFramework.TestTrigger>
+  <SuperEventFramework.ConfirmClear>Confirm Clear</SuperEventFramework.ConfirmClear>
+  <SuperEventFramework.ToggleSaveState>Click to toggle save trigger state</SuperEventFramework.ToggleSaveState>
+  <SuperEventFramework.ToggleGlobalState>Click to toggle global trigger state</SuperEventFramework.ToggleGlobalState>
+  <SuperEventFramework.SelectEvent>Click to select super event</SuperEventFramework.SelectEvent>
+  <SuperEventFramework.ToggleBlock>Click to toggle block state</SuperEventFramework.ToggleBlock>
+  
+  <!-- Row Labels -->
+  <SuperEventFramework.SaveStateLabel>Save Triggered</SuperEventFramework.SaveStateLabel>
+  <SuperEventFramework.GlobalStateLabel>Global Triggered</SuperEventFramework.GlobalStateLabel>
+  <SuperEventFramework.BlockLabel>Event Allowed</SuperEventFramework.BlockLabel>
+  <SuperEventFramework.SourceLabel>Source:</SuperEventFramework.SourceLabel>
+  <SuperEventFramework.DependencyLabel>Dep:</SuperEventFramework.DependencyLabel>
+  <SuperEventFramework.VolumeLabel>Vol</SuperEventFramework.VolumeLabel>
+  
+  <!-- Empty -->
+  <SuperEventFramework.NoEventsAvailable>No events available</SuperEventFramework.NoEventsAvailable>
+</LanguageData>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+  About.xml - Mod元数据文件
+  这个文件定义了Mod的基本信息，RimWorld会读取这个文件来显示Mod列表
+-->
+<ModMetaData>
+  <!-- Mod显示名称 -->
+  <name>Super Event Framework</name>
+  
+  <!-- 作者名 -->
+  <author>sakuyaMZ</author>
+  
+  <!-- Mod的唯一标识符，格式通常为 作者名.Mod名 -->
+  <packageId>sakuyaMZ.SuperEventFramework</packageId>
+  
+  <!-- 支持的RimWorld版本 -->
+  <supportedVersions>
+    <li>1.6</li>  <!-- 支持1.6版本 -->
+  </supportedVersions>
+  
+  <!--
+    Mod描述，会在Mod列表中显示
+    中文：一个超事件框架，允许通过XML配置在特定游戏事件发生时，弹出带有图片、音乐的全屏暂停界面。
+  -->
+  <description>A framework that displays full-screen picture and music events when specific game events occur.</description>
+
+  <!-- Mod依赖项：指定这个Mod依赖的其他Mod -->
+  <modDependencies>
+    <li>
+			<packageId>brrainz.harmony</packageId>
+			<displayName>harmony</displayName>
+			<steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=2009463077</steamWorkshopUrl>
+		</li>
+  </modDependencies>
+  
+  <!--
+    加载顺序：指定这个Mod应该在哪些Mod之后加载
+    在harmony之后加载
+  -->
+  <loadAfter>
+    <li>brrainz.harmony</li>
+  </loadAfter>
+</ModMetaData>
