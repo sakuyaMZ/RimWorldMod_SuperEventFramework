@@ -1,0 +1,12 @@
+# NuGet
+obj/
+
+# Build output
+bin/
+
+# Content resources (分离到扩展 mod)
+Content/
+
+# Project docs
+CsprojTemplate.md
+需求.md
