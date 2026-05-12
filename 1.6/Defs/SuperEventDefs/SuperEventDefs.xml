@@ -46,6 +46,7 @@
       事件图片路径（相对于Mod文件夹）
       格式：UI/Events/图片文件名（不需要扩展名）
       支持PNG、JPG格式
+      不填的话会有默认图片，但是默认图片是……哇袄
     -->
     <imagePath></imagePath>
     
@@ -53,6 +54,7 @@
       背景音乐路径（相对于Mod文件夹）
       格式：Audio/Events/音乐文件名（不需要扩展名）
       支持OGG、WAV格式
+      不填的话就是没有
     -->
     <bgmPath></bgmPath>
     
@@ -74,7 +76,7 @@
   <!-- 示例超事件定义：全面核战争 -->
   <SuperEventFramework.SuperEventDef>
     <defName>NuclearWar</defName>
-    <triggerEventId>IRBM_NuclearWar.label</triggerEventId>
+    <triggerEventId>IRBM.NuclearWarLabel</triggerEventId>
     <title>SuperEvent.NuclearWar.Title</title>
     <desc>SuperEvent.NuclearWar.Desc</desc>
     <btnText>SuperEvent.NuclearWar.Btn</btnText>
@@ -84,7 +86,22 @@
     <requiredModOrDlc>kazepsi.irbm</requiredModOrDlc>
   </SuperEventFramework.SuperEventDef>
 
+  <!-- 示例超事件定义：全面核战争（变体） -->
+  <SuperEventFramework.SuperEventDef>
+    <defName>NuclearWarVariant</defName>
+    <triggerEventId>IRBM.NuclearWarLabel</triggerEventId>
+    <title>SuperEvent.NuclearWar.Title</title>
+    <desc>SuperEvent.NuclearWarVariant.Desc</desc>
+    <btnText>SuperEvent.NuclearWarVariant.Btn</btnText>
+    <imagePath>UI/Events/NuclearWarVariant</imagePath>
+    <bgmPath>Events/NuclearWarVariant</bgmPath>
+    <defaultTriggerMode>PerSaveOnce</defaultTriggerMode>
+    <requiredModOrDlc>kazepsi.irbm</requiredModOrDlc>
+  </SuperEventFramework.SuperEventDef>
+
   <!-- 示例超事件定义：小螈拜师 -->
+  <!-- 图片出自BV1vZPfzpE1S，正在征求作者授权使用，如果作者不同意则会进行替换 -->
+  <!-- bgm出自ba的Connected Sky-->
   <SuperEventFramework.SuperEventDef>
     <defName>MoelotlApprenticeLetter</defName>
     <triggerEventId>RiM.ApprenticeLetter</triggerEventId>
@@ -98,6 +115,8 @@
   </SuperEventFramework.SuperEventDef>
 
   <!-- 示例超事件定义：金色魔方 -->
+  <!-- 图片出自BV1gpfvBhEcG，作者已授权使用 -->
+  <!-- bgm出自BV1gmZYYAEzx -->
   <SuperEventFramework.SuperEventDef>
     <defName>GoldenCube</defName>
     <triggerEventId>GoldenCubeArrivalLabel</triggerEventId>

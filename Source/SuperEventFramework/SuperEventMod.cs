@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using HarmonyLib;
 using RimWorld;
 using Verse;
 using Verse.Sound;
@@ -8,12 +9,19 @@ namespace SuperEventFramework
 {
     public class SuperEventMod : Mod
     {
+        private static bool harmonyPatched = false;
+        
         // 折叠状态——已展开的事件组ID集合
         private HashSet<string> expandedEventGroups = new HashSet<string>();
         
         public SuperEventMod(ModContentPack content) : base(content)
         {
             // 这里可以放置不需要等待其他Mod加载的简单初始化
+            if (!harmonyPatched)
+            {
+                harmonyPatched = true;
+                new Harmony("sakuyaMZ.SuperEventFramework").PatchAll();
+            }
         }
         
         #region 设置窗口
@@ -200,8 +208,11 @@ namespace SuperEventFramework
             float curX = arrowRect.xMax + 4f;
             
             // 事件标识
+            string displayText = eventId.Translate();
+
             Rect labelRect = new Rect(curX, rect.y, 280f, 24f);
-            Widgets.Label(labelRect, eventId.Translate() + $" [{eventId}]");
+            Widgets.Label(labelRect, displayText);
+            TooltipHandler.TipRegion(labelRect, eventId);//鼠标悬停时显示原始的key
             curX = labelRect.xMax + 10f;
             
             // 存档触发状态
@@ -325,11 +336,13 @@ namespace SuperEventFramework
             
             // 来源子Mod
             row.Label("SuperEventFramework.SourceLabel".Translate(), 40f);
-            row.Label(subDef.modContentPack?.Name ?? "", 90f);
+            string sourceName = subDef.modContentPack?.Name ?? "";
+            row.Label(sourceName, 90f, sourceName);
             
             // 依赖
             row.Label("SuperEventFramework.DependencyLabel".Translate(), 40f);
-            row.Label(SuperEventManager.GetModOrDlcName(subDef.requiredModOrDlc) ?? "", 90f);
+            string depName = SuperEventManager.GetModOrDlcName(subDef.requiredModOrDlc) ?? "";
+            row.Label(depName, 90f, depName);
             
             // 音量标签
             row.Gap(4f);

@@ -35,14 +35,14 @@ namespace SuperEventFramework
             bool noBtnText = SuperEventManager.GetSuperEventTextTranslate(eventDef.btnText).NullOrEmpty();
             this.doCloseButton = noBtnText; // 无btnText时显示底部关闭按钮
             this.doCloseX = noBtnText;     // 无btnText时显示右上角X按钮
-            this.absorbInputAroundWindow = true; // 吸收窗口周围的输入
-            this.forcePause = true;        // 强制暂停游戏
+            this.absorbInputAroundWindow = false; // 不阻挡输入，允许玩家操作其他界面
+            this.forcePause = false;           // false=仅TickManager.Pause暂停tick，不锁定WASD/拖拽/暂停按钮
+            this.preventCameraMotion = false;  // 允许WASD移动镜头和鼠标拖拽屏幕
             
             // 计算自适应窗口大小
             CalculateWindowSize(noBtnText);
             
-            // 自动暂停游戏
-            //防御性编程，如果上面的暂停失败，就手动暂停，可以考虑去掉
+            // 暂停游戏右下角tick时间
             if (Current.ProgramState == ProgramState.Playing)
             {
                 //Find是RimWorld的静态类，用于访问游戏状态和组件
@@ -70,7 +70,8 @@ namespace SuperEventFramework
             
             // 内容区宽度 = 图片宽度 + 左右预留空间
             float contentWidth = configWidth + imageWidthSpacing;
-            float descHeight = Text.CalcHeight(desc, contentWidth - textWidthSpacing);
+            float descWidth = contentWidth - textWidthSpacing - Margin * 2f;
+            float descHeight = Text.CalcHeight(desc, descWidth);
             
             // 内容区高度 = 上间距 + 标题 + 间距 [+ 图片 + 间距] + 描述 + 间距 [+ 按钮]
             float contentHeight = spacing + titleHeight + spacing;

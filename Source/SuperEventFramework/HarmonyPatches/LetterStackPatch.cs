@@ -7,8 +7,23 @@ namespace SuperEventFramework.HarmonyPatches
     /// <summary>
     /// Harmony补丁类 - 监听游戏信件事件
     /// 这个补丁会拦截RimWorld中LetterStack.ReceiveLetter方法的调用
+    /// 拦截 LetterStack.ReceiveLetter(Letter, string, int, bool) 重载。
+    /// 
+    /// LetterStack.ReceiveLetter 共有 3 个重载：
+    ///   1. ReceiveLetter(TaggedString label, TaggedString text, LetterDef, LookTargets, ...)
+    ///      工厂方法，内部创建 Letter 对象后调用重载 3。
+    ///   2. ReceiveLetter(TaggedString label, TaggedString text, LetterDef, string, int, bool)
+    ///      同上，工厂方法，创建 Letter 后调用重载 3。
+    ///   3. ReceiveLetter(Letter let, string debugInfo, int delayTicks, bool playSound)
+    ///      最终处理入口，负责播放音效、暂停、加入信件堆栈等。所有调用路径最终汇集于此。
+    /// 
+    /// 只 Patch 重载 3 即可覆盖所有信件来源：
+    ///   - 通过 Storyteller 触发的 Incident 信件
+    ///   - 通过 Quest 系统触发的任务信件
+    ///   - 其他 Mod 直接调用 LetterMaker.MakeLetter + ReceiveLetter 的信件
+    ///   - 精神崩溃、死亡通知、派系关系变化等各种游戏内信件
     /// </summary>
-    [HarmonyPatch(typeof(LetterStack), "ReceiveLetter")] // 指定要修补的类和方法
+    [HarmonyPatch(typeof(LetterStack), nameof(LetterStack.ReceiveLetter), typeof(Letter), typeof(string), typeof(int), typeof(bool))]
     public static class LetterStackPatch
     {
         /// <summary>

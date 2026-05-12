@@ -5,7 +5,7 @@
   <SuperEventFramework.StopBGMOnCloseDesc>取消勾选后，关闭事件窗口时会立即停止背景音乐播放</SuperEventFramework.StopBGMOnCloseDesc>
   
   <SuperEventFramework.GlobalBlocker>全局屏蔽</SuperEventFramework.GlobalBlocker>
-  <SuperEventFramework.GlobalBlockerDesc>勾选后将屏蔽所有超事件的触发</SuperEventFramework.GlobalBlockerDesc>
+  <SuperEventFramework.GlobalBlockerDesc>取消勾选后将屏蔽所有超事件的触发</SuperEventFramework.GlobalBlockerDesc>
   <SuperEventFramework.ToggleGlobalBlock>点击切换全局屏蔽状态</SuperEventFramework.ToggleGlobalBlock>
   
   <SuperEventFramework.SaveRecords>本存档触发记录</SuperEventFramework.SaveRecords>

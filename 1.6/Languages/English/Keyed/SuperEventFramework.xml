@@ -5,7 +5,7 @@
   <SuperEventFramework.StopBGMOnCloseDesc>If unchecked, the background music will stop immediately when the event window is closed.</SuperEventFramework.StopBGMOnCloseDesc>
   
   <SuperEventFramework.GlobalBlocker>Global Blocker</SuperEventFramework.GlobalBlocker>
-  <SuperEventFramework.GlobalBlockerDesc>Check to block all super events from triggering.</SuperEventFramework.GlobalBlockerDesc>
+  <SuperEventFramework.GlobalBlockerDesc>Uncheck to block all super events from triggering.</SuperEventFramework.GlobalBlockerDesc>
   <SuperEventFramework.ToggleGlobalBlock>Click to toggle global block</SuperEventFramework.ToggleGlobalBlock>
   
   <SuperEventFramework.SaveRecords>Save Records</SuperEventFramework.SaveRecords>

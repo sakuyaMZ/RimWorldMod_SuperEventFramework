@@ -10,6 +10,11 @@
   <SuperEvent.NuclearWar.Desc>A second sun slowly rises in the sky — after that, only endless night remains.</SuperEvent.NuclearWar.Desc>
   <SuperEvent.NuclearWar.Btn>There is nothing left to observe.</SuperEvent.NuclearWar.Btn>
   
+  <!-- Nuclear War Variant Event -->
+  <!-- title reuses SuperEvent.NuclearWar.Title -->
+  <SuperEvent.NuclearWarVariant.Desc>Mankind emerged from caves to kindle fire, only to return to the caves consumed by flame. May those who come after be fortunate enough to glimpse the errors we once made…</SuperEvent.NuclearWarVariant.Desc>
+  <SuperEvent.NuclearWarVariant.Btn>Over a thousand mountains the birds have ceased to fly; on ten thousand paths all human tracks have vanished.</SuperEvent.NuclearWarVariant.Btn>
+  
   <!-- Little Moelotl Seeking Master Event -->
   <SuperEvent.MoelotlApprenticeLetter.Title>Little Moelotl Seeking Master</SuperEvent.MoelotlApprenticeLetter.Title>
   <SuperEvent.MoelotlApprenticeLetter.Desc>Could the master be a foreign Taoist Master?</SuperEvent.MoelotlApprenticeLetter.Desc>
@@ -18,6 +23,6 @@
   <!-- Golden Cube Event -->
   <SuperEvent.GoldenCube.Title>WTF the golden…</SuperEvent.GoldenCube.Title>
   <SuperEvent.GoldenCube.Desc>The golden cube, my golden cube. Hehehe, so many golden cubes. Golden cube golden cube golden cube golden cube golden cube golden cube golden cube… Golden cube? WHERE'S MY GOLDEN CUBE?!</SuperEvent.GoldenCube.Desc>
-  <SuperEvent.GoldenCube.Btn>Where did you hide my golden cube?! Give it back!</SuperEvent.GoldenCube.Btn>
+  <SuperEvent.GoldenCube.Btn>Where did you hide my golden cube?!Give it back!</SuperEvent.GoldenCube.Btn>
   
 </LanguageData>
