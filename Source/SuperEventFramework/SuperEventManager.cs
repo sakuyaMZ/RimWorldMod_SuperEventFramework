@@ -78,6 +78,9 @@ namespace SuperEventFramework
                 }
                 list.Add(def);
             }
+
+            // 移除示例事件
+            eventLookup.Remove("ExampleEventId");
         }
 
         /// <summary>

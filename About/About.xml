@@ -5,13 +5,13 @@
 -->
 <ModMetaData>
   <!-- Mod显示名称 -->
-  <name>SuperEventFramework</name>
+  <name>SuperEvent</name>
   
   <!-- 作者名 -->
   <author>sakuyaMZ</author>
   
   <!-- Mod的唯一标识符，格式通常为 作者名.Mod名 -->
-  <packageId>sakuyaMZ.SuperEventFramework</packageId>
+  <packageId>sakuyaMZ.SuperEvent</packageId>
   
   <!-- 支持的RimWorld版本 -->
   <supportedVersions>
@@ -40,4 +40,6 @@
   <loadAfter>
     <li>brrainz.harmony</li>
   </loadAfter>
+
+  <modVersion>1.0.0</modVersion>
 </ModMetaData>

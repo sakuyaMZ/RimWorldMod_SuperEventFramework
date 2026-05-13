@@ -74,6 +74,7 @@
   </SuperEventFramework.SuperEventDef>
   
   <!-- 示例超事件定义：全面核战争 -->
+  <!-- bgm出自BV1PA411M7eD -->
   <SuperEventFramework.SuperEventDef>
     <defName>NuclearWar</defName>
     <triggerEventId>IRBM.NuclearWarLabel</triggerEventId>
@@ -87,6 +88,7 @@
   </SuperEventFramework.SuperEventDef>
 
   <!-- 示例超事件定义：全面核战争（变体） -->
+  <!-- bgm出自we are the world -->
   <SuperEventFramework.SuperEventDef>
     <defName>NuclearWarVariant</defName>
     <triggerEventId>IRBM.NuclearWarLabel</triggerEventId>
