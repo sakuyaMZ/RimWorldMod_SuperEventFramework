@@ -13,6 +13,7 @@ namespace SuperEventFramework
         
         // 折叠状态——已展开的事件组ID集合
         private HashSet<string> expandedEventGroups = new HashSet<string>();
+        private Vector2 scrollPosition = Vector2.zero; //滚动条位置
         
         public SuperEventMod(ModContentPack content) : base(content)
         {
@@ -151,8 +152,7 @@ namespace SuperEventFramework
             }
             
             Rect viewRect = new Rect(0f, 0f, rect.width - 20f, totalHeight);
-            Vector2 scrollPos = Vector2.zero;
-            Widgets.BeginScrollView(rect, ref scrollPos, viewRect);//整个视图区域滚动条
+            Widgets.BeginScrollView(rect, ref scrollPosition, viewRect);
             
             // 绘制一级事件行
             float y = 0f;
@@ -208,7 +208,7 @@ namespace SuperEventFramework
             float curX = arrowRect.xMax + 4f;
             
             // 事件标识
-            string displayText = eventId.Translate();
+            string displayText = SuperEventManager.GetTranslate(eventId);
 
             Rect labelRect = new Rect(curX, rect.y, 280f, 24f);
             Widgets.Label(labelRect, displayText);

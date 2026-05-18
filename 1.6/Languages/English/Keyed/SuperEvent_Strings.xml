@@ -24,5 +24,25 @@
   <SuperEvent.GoldenCube.Title>WTF the golden…</SuperEvent.GoldenCube.Title>
   <SuperEvent.GoldenCube.Desc>The golden cube, my golden cube. Hehehe, so many golden cubes. Golden cube golden cube golden cube golden cube golden cube golden cube golden cube… Golden cube? WHERE'S MY GOLDEN CUBE?!</SuperEvent.GoldenCube.Desc>
   <SuperEvent.GoldenCube.Btn>Where did you hide my golden cube?!Give it back!</SuperEvent.GoldenCube.Btn>
-  
+
+  <!-- Ratkin Partisans Event -->
+  <SuperEvent.RatkinPartisansArrived.Title>Ratkin Partisans Have Arrived</SuperEvent.RatkinPartisansArrived.Title>
+  <SuperEvent.RatkinPartisansArrived.Desc>Revolution is not a dinner party, not an essay, not painting or embroidery; it cannot be so refined, so leisurely and graceful, so gentle and temperate, so courteous, restrained, and magnanimous.</SuperEvent.RatkinPartisansArrived.Desc>
+  <SuperEvent.RatkinPartisansArrived.Btn>A single spark can start a prairie fire</SuperEvent.RatkinPartisansArrived.Btn>
+
+  <!-- Kiiro Refugee Baby Event -->
+  <SuperEvent.KiiroRefugeeBaby.Title>Kiiro Refugee Baby</SuperEvent.KiiroRefugeeBaby.Title>
+  <SuperEvent.KiiroRefugeeBaby.Desc>What is the weight of a life? Whether it be petty evil or grave evil, at least in the moment one chooses to lend a helping hand, it can still be called kindness…</SuperEvent.KiiroRefugeeBaby.Desc>
+  <SuperEvent.KiiroRefugeeBaby.Btn>Her fate now rests in your hands</SuperEvent.KiiroRefugeeBaby.Btn>
+
+  <!-- Milira Wounded Angel Event -->
+  <SuperEvent.MiliraWoundedAngel.Title>Wounded Angel</SuperEvent.MiliraWoundedAngel.Title>
+  <SuperEvent.MiliraWoundedAngel.Desc>Falling from the sky, fate unknown… Perhaps this marks the beginning of the loosening of the Iron Curtain between Cradol and the lands below? Or perhaps she will be just another trophy for the Skyfeather Church?</SuperEvent.MiliraWoundedAngel.Desc>
+  <SuperEvent.MiliraWoundedAngel.Btn>Falling into the rimworld like a shooting star</SuperEvent.MiliraWoundedAngel.Btn>
+
+  <!-- Dark Knight Order Event -->
+  <SuperEvent.DarkKnightArrived.Title>Dark Knights</SuperEvent.DarkKnightArrived.Title>
+  <SuperEvent.DarkKnightArrived.Desc>"Once upon a time, there was a knight commander who rose from an ordinary farmer to his position through extraordinary martial skills and unwavering loyalty. However, one day, he gave the bread and wine that were intended for the worship of God to a starving child who was on the verge of death, lying at the entrance of a church. The church declared the knight commander an unforgivable heretic because of this act. At his moment of desperation, a thick fog suddenly descended, blinding the eyes of those around him, but the pebbles on the ground shone brightly, leading him to escape the encirclement. When his footsteps stopped, the ground suddenly split in two, and the knight commander vanished from the world forever…"\n——Helen Violet year 4881 Winter</SuperEvent.DarkKnightArrived.Desc>
+  <SuperEvent.DarkKnightArrived.Btn>I suppose we must stop them?</SuperEvent.DarkKnightArrived.Btn>
+
 </LanguageData>

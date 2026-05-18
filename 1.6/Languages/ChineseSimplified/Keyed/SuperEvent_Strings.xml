@@ -15,7 +15,7 @@
   <SuperEvent.NuclearWarVariant.Desc>人类从洞中走出点燃火焰，最终在火焰中又回到洞里。愿后来者足够幸运，能一窥我们曾经犯下的错误……</SuperEvent.NuclearWarVariant.Desc>
   <SuperEvent.NuclearWarVariant.Btn>千山鸟飞绝，万径人踪灭</SuperEvent.NuclearWarVariant.Btn>
   
-  <!-- 小鱼师事件 -->
+  <!-- 小螈拜师事件 -->
   <SuperEvent.MoelotlApprenticeLetter.Title>小螈拜师</SuperEvent.MoelotlApprenticeLetter.Title>
   <SuperEvent.MoelotlApprenticeLetter.Desc>难不成师傅是外籍道长？</SuperEvent.MoelotlApprenticeLetter.Desc>
   <SuperEvent.MoelotlApprenticeLetter.Btn>外籍道长有的是手段和力气跟飞僵斗</SuperEvent.MoelotlApprenticeLetter.Btn>
@@ -24,4 +24,25 @@
   <SuperEvent.GoldenCube.Title>神金</SuperEvent.GoldenCube.Title>
   <SuperEvent.GoldenCube.Desc>金色魔方，我的金色魔方。嘿嘿嘿，有好多的金色魔方。金色魔方金色魔方金色魔方金色魔方金色魔方金色魔方金色魔方……金色魔方？我的金色魔方呢！</SuperEvent.GoldenCube.Desc>
   <SuperEvent.GoldenCube.Btn>你把金色魔方藏哪了？！还给我！</SuperEvent.GoldenCube.Btn>
+
+  <!-- 地鼠游击队事件 -->
+  <SuperEvent.RatkinPartisansArrived.Title>鼠族游击队已抵达</SuperEvent.RatkinPartisansArrived.Title>
+  <SuperEvent.RatkinPartisansArrived.Desc>革命不是请客吃饭，不是做文章，不是绘画绣花，不能那样雅致，那样从容不迫，文质彬彬，那样温良恭俭让。</SuperEvent.RatkinPartisansArrived.Desc>
+  <SuperEvent.RatkinPartisansArrived.Btn>星星之火可以燎原</SuperEvent.RatkinPartisansArrived.Btn>
+
+  <!-- 绮罗托孤事件 -->
+  <SuperEvent.KiiroRefugeeBaby.Title>绮罗托孤</SuperEvent.KiiroRefugeeBaby.Title>
+  <SuperEvent.KiiroRefugeeBaby.Desc>生命的重量，又有几何？不管是小奸小恶还是大奸大恶，至少在决定伸出援手时，都可被称为善良……</SuperEvent.KiiroRefugeeBaby.Desc>
+  <SuperEvent.KiiroRefugeeBaby.Btn>她的命运现在掌握在你的手中</SuperEvent.KiiroRefugeeBaby.Btn>
+
+  <!-- 米莉拉折翼天使事件 -->
+  <SuperEvent.MiliraWoundedAngel.Title>折翼天使</SuperEvent.MiliraWoundedAngel.Title>
+  <SuperEvent.MiliraWoundedAngel.Desc>从天空坠落，前途未卜……或许卡利多和地面的铁幕自此开始松动？或许又是一个教会的战利品？</SuperEvent.MiliraWoundedAngel.Desc>
+  <SuperEvent.MiliraWoundedAngel.Btn>如流星般坠入边缘世界</SuperEvent.MiliraWoundedAngel.Btn>
+
+  <!-- 黑暗骑士团事件 -->
+  <SuperEvent.DarkKnightArrived.Title>黑暗骑士团</SuperEvent.DarkKnightArrived.Title>
+  <SuperEvent.DarkKnightArrived.Desc>“从前，有一位英勇善战的骑士长，他是凭借过人的武艺和纯洁的忠诚从一名不起眼的农民一步步达到这个地位的。可是有一天，他为了救济一个快要饿死在教堂大门前的孩子，将原本用于供奉神的面包与红酒都给了她，教会便因此宣判了这名骑士长是不可饶恕的异端。正当他走投无路的时候，黑色的迷雾忽然降下，迷住了周围人的眼睛，而地面上的鹅卵石却变得闪闪发亮，引导着他逃离了重重包围。当他的脚步停下时，地面忽然裂成两半，这位骑士长便从此消失在了人世间...”\n——海伦·紫罗兰 4881年 素象</SuperEvent.DarkKnightArrived.Desc>
+  <SuperEvent.DarkKnightArrived.Btn>我想，我们必须得阻止他们？</SuperEvent.DarkKnightArrived.Btn>
+
 </LanguageData>

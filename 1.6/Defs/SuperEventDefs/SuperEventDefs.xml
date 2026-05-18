@@ -88,7 +88,7 @@
   </SuperEventFramework.SuperEventDef>
 
   <!-- 示例超事件定义：全面核战争（变体） -->
-  <!-- bgm出自we are the world -->
+  <!-- bgm是we are the world -->
   <SuperEventFramework.SuperEventDef>
     <defName>NuclearWarVariant</defName>
     <triggerEventId>IRBM.NuclearWarLabel</triggerEventId>
@@ -102,8 +102,8 @@
   </SuperEventFramework.SuperEventDef>
 
   <!-- 示例超事件定义：小螈拜师 -->
-  <!-- 图片出自BV1vZPfzpE1S，正在征求作者授权使用，如果作者不同意则会进行替换 -->
-  <!-- bgm出自ba的Connected Sky-->
+  <!-- 图片出自BV1vZPfzpE1S，作者已授权使用 -->
+  <!-- bgm是ba的Connected Sky-->
   <SuperEventFramework.SuperEventDef>
     <defName>MoelotlApprenticeLetter</defName>
     <triggerEventId>RiM.ApprenticeLetter</triggerEventId>
@@ -130,4 +130,69 @@
     <defaultTriggerMode>PerSaveOnce</defaultTriggerMode>
     <requiredModOrDlc>ludeon.rimworld.anomaly</requiredModOrDlc>
   </SuperEventFramework.SuperEventDef>
+
+  <!-- 地鼠游击队 -->
+  <!-- 图片出自BV1mSd6BiE22 -->
+  <!-- bgm是Полюшко-поле草原啊草原 -->
+  <SuperEventFramework.SuperEventDef>
+    <defName>RatkinPartisansArrived</defName>
+    <triggerEventId>RKU_GuerrillasArrivedLabel</triggerEventId>
+    <title>SuperEvent.RatkinPartisansArrived.Title</title>
+    <desc>SuperEvent.RatkinPartisansArrived.Desc</desc>
+    <btnText>SuperEvent.RatkinPartisansArrived.Btn</btnText>
+    <imagePath>UI/Events/RatkinPartisansArrived</imagePath>
+    <bgmPath>Events/RatkinPartisansArrived</bgmPath>
+    <defaultTriggerMode>PerSaveOnce</defaultTriggerMode>
+    <requiredModOrDlc>RKU.RatkinUnderground</requiredModOrDlc>
+  </SuperEventFramework.SuperEventDef>
+
+  <!-- 绮罗托孤 -->
+  <!-- 图片出自BV1gywezMEH5，作者已授权使用 -->
+  <!-- bgm是A Twisted Path-->
+  <SuperEventFramework.SuperEventDef>
+    <defName>KiiroRefugeeBaby</defName>
+    <triggerEventId>LetterLabelRefugeeKiiroBaby</triggerEventId>
+    <title>SuperEvent.KiiroRefugeeBaby.Title</title>
+    <desc>SuperEvent.KiiroRefugeeBaby.Desc</desc>
+    <btnText>SuperEvent.KiiroRefugeeBaby.Btn</btnText>
+    <imagePath>UI/Events/KiiroRefugeeBaby</imagePath>
+    <bgmPath>Events/KiiroRefugeeBaby</bgmPath>
+    <defaultTriggerMode>PerSaveOnce</defaultTriggerMode>
+    <requiredModOrDlc>Ancot.KiiroStoryEventsExpanded</requiredModOrDlc>
+  </SuperEventFramework.SuperEventDef>
+
+  <!-- 米莉拉折翼天使 -->
+  <!-- 图片出自BV1xVB6BnEUR -->
+  <!-- bgm是Echoes of the Eye-->
+  <SuperEventFramework.SuperEventDef>
+    <defName>MiliraWoundedAngel</defName>
+    <triggerEventId>Milira.LetterFallenAngel</triggerEventId>
+    <title>SuperEvent.MiliraWoundedAngel.Title</title>
+    <desc>SuperEvent.MiliraWoundedAngel.Desc</desc>
+    <btnText>SuperEvent.MiliraWoundedAngel.Btn</btnText>
+    <imagePath>UI/Events/MiliraWoundedAngel</imagePath>
+    <bgmPath>Events/MiliraWoundedAngel</bgmPath>
+    <defaultTriggerMode>PerSaveOnce</defaultTriggerMode>
+    <requiredModOrDlc>Ancot.MiliraRace</requiredModOrDlc>
+  </SuperEventFramework.SuperEventDef>
+
+  <!-- 黑暗骑士团 -->
+  <!-- 图片pid 130004050 -->
+  <!-- bgm出自BV1n1421q7fX，曲子是Гимн Воланда（沃兰德之歌） -->
+  <SuperEventFramework.SuperEventDef>
+    <defName>DarkKnightArrived</defName>
+    <triggerEventId>RA_DarkKnightArrival.letterLabel</triggerEventId>
+    <title>SuperEvent.DarkKnightArrived.Title</title>
+    <desc>SuperEvent.DarkKnightArrived.Desc</desc>
+    <btnText>SuperEvent.DarkKnightArrived.Btn</btnText>
+    <imagePath>UI/Events/DarkKnightArrived</imagePath>
+    <bgmPath>Events/DarkKnightArrived</bgmPath>
+    <defaultTriggerMode>PerSaveOnce</defaultTriggerMode>
+    <requiredModOrDlc>fxz.ratkinanomaly.update</requiredModOrDlc>
+  </SuperEventFramework.SuperEventDef>
+
+  <!--
+    todo
+    ……
+  -->
 </Defs>

@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Reflection;
 using RimWorld;
 using Verse;
 using UnityEngine;
@@ -20,9 +21,6 @@ namespace SuperEventFramework
 
         // Mod设置实例
         private static SuperEventSettings settings;
-        
-        // 游戏组件实例（用于PerSaveOnce模式）
-        private static SuperEventGameComponent gameComponent;
         
         // 全局设置定义
         private static SuperEventSettingsDef settingsDef;
@@ -93,14 +91,56 @@ namespace SuperEventFramework
             // 遍历eventLookup
             foreach (var pair in eventLookup)
             {
-                string translste = pair.Key.Translate();
-                if (!eventLookupTranslate.TryGetValue(translste, out var list))
+                string translated = GetTranslate(pair.Key);
+                if (!eventLookupTranslate.TryGetValue(translated, out var list))
                 {
                     list = new List<string>();
-                    eventLookupTranslate[translste] = list;
+                    eventLookupTranslate[translated] = list;
                 }
                 list.Add(pair.Key);
             }
+        }
+
+        /// <summary>
+        /// 获取事件的翻译文本
+        /// </summary>
+        /// <param name="key">事件的key，可能是直接的本地化key，也可能是IncidentDef路径下的key</param>
+        /// <returns>事件的翻译文本</returns>
+        public static string GetTranslate(string key)
+        {
+            // 先尝试直接翻译
+            if (key.TryTranslate(out TaggedString translated))
+                return translated;
+
+            // 如果直接翻译失败，即不在keyed中，尝试根据点号分隔，查找IncidentDef中的属性
+            var parts = key.Split('.');
+            // IncidentDef路径下的翻译文本必然带点号，所以至少有两个部分
+            if (parts.Length >= 2)
+            {
+                //先获取最前面的IncidentDef定义，然后点后的逐级递进，如RA_DarkKnightArrival.letterLabel
+                var def = GenDefDatabase.GetDefSilentFail(typeof(IncidentDef), parts[0]);
+                if (def != null)
+                {
+                    object obj = def;
+                    for (int i = 1; i < parts.Length && obj != null; i++)
+                    {
+                        // 如果是索引，直接获取数组元素
+                        if (int.TryParse(parts[i], out int idx))
+                            obj = obj.GetType().GetProperty("Item")?.GetValue(obj, new object[] { idx });
+                        // 如果是字段，直接获取字段值
+                        //BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic 表示获取实例字段，包括公共和非公共字段
+                        else
+                            obj = obj.GetType().GetField(parts[i],
+                                BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic)
+                                ?.GetValue(obj);
+                    }
+                    if (obj is string str && !str.NullOrEmpty())
+                        return str;
+                }
+            }
+
+            // 如果以上所有方法都失败，返回原始key的翻译，但是是扭曲字体的原始key
+            return key.Translate();
         }
         
         /// <summary>
@@ -178,14 +218,10 @@ namespace SuperEventFramework
                     return false; // 不触发
                     
                 case SuperEventDef.TriggerMode.PerSaveOnce:
-                    // 每个存档只能触发一次
-                    if (gameComponent == null)
-                        gameComponent = CurrentSave.GetComponent<SuperEventGameComponent>();
-                    return !gameComponent.HasTriggered(def.defName);
+                    return !(CurrentSave?.GetComponent<SuperEventGameComponent>()?.HasTriggered(def.triggerEventId) ?? false);
                     
                 case SuperEventDef.TriggerMode.GlobalOnce:
-                    // 全局只能触发一次
-                    return !settings.HasTriggeredGlobally(def.defName);
+                    return !settings.HasTriggeredGlobally(def.triggerEventId);
 
                 default:
                     return true;
@@ -204,13 +240,11 @@ namespace SuperEventFramework
             switch (triggerMode)
             {
                 case SuperEventDef.TriggerMode.PerSaveOnce:
-                    if (gameComponent == null)
-                        gameComponent = CurrentSave.GetComponent<SuperEventGameComponent>();
-                    gameComponent.MarkAsTriggered(def.defName);
+                    CurrentSave?.GetComponent<SuperEventGameComponent>()?.MarkAsTriggered(def.triggerEventId);
                     break;
                     
                 case SuperEventDef.TriggerMode.GlobalOnce:
-                    settings.MarkAsTriggeredGlobally(def.defName);
+                    settings.MarkAsTriggeredGlobally(def.triggerEventId);
                     break;
             }
             
@@ -304,10 +338,7 @@ namespace SuperEventFramework
         /// </summary>
         public static bool HasTriggeredInSave(string triggerEventId)
         {
-            if (gameComponent == null)
-                gameComponent = CurrentSave?.GetComponent<SuperEventGameComponent>();
-            
-            return gameComponent?.HasTriggered(triggerEventId) ?? false;
+            return CurrentSave?.GetComponent<SuperEventGameComponent>()?.HasTriggered(triggerEventId) ?? false;
         }
 
         /// <summary>
@@ -315,9 +346,7 @@ namespace SuperEventFramework
         /// </summary>
         public static void ToggleSaveTriggerState(string triggerEventId, bool hasTriggered)
         {
-            if (gameComponent == null)
-                gameComponent = CurrentSave?.GetComponent<SuperEventGameComponent>();
-            
+            var gameComponent = CurrentSave?.GetComponent<SuperEventGameComponent>();
             if (gameComponent != null)
             {
                 if (hasTriggered)
