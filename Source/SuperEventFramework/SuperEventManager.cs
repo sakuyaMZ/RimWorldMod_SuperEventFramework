@@ -104,7 +104,7 @@ namespace SuperEventFramework
         /// <summary>
         /// 获取事件的翻译文本
         /// </summary>
-        /// <param name="key">事件的key，可能是直接的本地化key，也可能是IncidentDef路径下的key</param>
+        /// <param name="key">事件的key，可能是直接的本地化key，也可能是DefInjected/IncidentDef路径下的key</param>
         /// <returns>事件的翻译文本</returns>
         public static string GetTranslate(string key)
         {
@@ -112,12 +112,12 @@ namespace SuperEventFramework
             if (key.TryTranslate(out TaggedString translated))
                 return translated;
 
-            // 如果直接翻译失败，即不在keyed中，尝试根据点号分隔，查找IncidentDef中的属性
+            // 如果直接翻译失败，即不在keyed中，尝试根据点号分隔，查找DefInjected/IncidentDef中的属性
             var parts = key.Split('.');
-            // IncidentDef路径下的翻译文本必然带点号，所以至少有两个部分
+            // DefInjected/IncidentDef路径下的翻译文本必然带点号，所以至少有两个部分
             if (parts.Length >= 2)
             {
-                //先获取最前面的IncidentDef定义，然后点后的逐级递进，如RA_DarkKnightArrival.letterLabel
+                //先获取最前面的DefInjected/IncidentDef定义，然后点后的逐级递进，如RA_DarkKnightArrival.letterLabel
                 var def = GenDefDatabase.GetDefSilentFail(typeof(IncidentDef), parts[0]);
                 if (def != null)
                 {
@@ -218,7 +218,7 @@ namespace SuperEventFramework
                     return false; // 不触发
                     
                 case SuperEventDef.TriggerMode.PerSaveOnce:
-                    return !(CurrentSave?.GetComponent<SuperEventGameComponent>()?.HasTriggered(def.triggerEventId) ?? false);
+                    return !(SuperEventGameComponent.Instance?.HasTriggered(def.triggerEventId) ?? false);
                     
                 case SuperEventDef.TriggerMode.GlobalOnce:
                     return !settings.HasTriggeredGlobally(def.triggerEventId);
@@ -240,7 +240,7 @@ namespace SuperEventFramework
             switch (triggerMode)
             {
                 case SuperEventDef.TriggerMode.PerSaveOnce:
-                    CurrentSave?.GetComponent<SuperEventGameComponent>()?.MarkAsTriggered(def.triggerEventId);
+                    SuperEventGameComponent.Instance?.MarkAsTriggered(def.triggerEventId);
                     break;
                     
                 case SuperEventDef.TriggerMode.GlobalOnce:
@@ -338,7 +338,7 @@ namespace SuperEventFramework
         /// </summary>
         public static bool HasTriggeredInSave(string triggerEventId)
         {
-            return CurrentSave?.GetComponent<SuperEventGameComponent>()?.HasTriggered(triggerEventId) ?? false;
+            return SuperEventGameComponent.Instance?.HasTriggered(triggerEventId) ?? false;
         }
 
         /// <summary>
@@ -346,7 +346,7 @@ namespace SuperEventFramework
         /// </summary>
         public static void ToggleSaveTriggerState(string triggerEventId, bool hasTriggered)
         {
-            var gameComponent = CurrentSave?.GetComponent<SuperEventGameComponent>();
+            var gameComponent = SuperEventGameComponent.Instance;
             if (gameComponent != null)
             {
                 if (hasTriggered)

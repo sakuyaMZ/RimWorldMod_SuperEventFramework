@@ -10,6 +10,8 @@ namespace SuperEventFramework
     /// </summary>
     public class SuperEventGameComponent : GameComponent
     {
+        public static SuperEventGameComponent Instance => SuperEventManager.CurrentSave?.GetComponent<SuperEventGameComponent>();
+
         // 当前存档中已触发的事件ID集合
         public HashSet<string> triggeredEventsPerSave = new HashSet<string>();
         

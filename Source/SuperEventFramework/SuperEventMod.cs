@@ -21,7 +21,7 @@ namespace SuperEventFramework
             if (!harmonyPatched)
             {
                 harmonyPatched = true;
-                new Harmony("sakuyaMZ.SuperEventFramework").PatchAll();
+                new Harmony("sakuyaMZ.SuperEvent").PatchAll();
             }
         }
         
@@ -91,14 +91,12 @@ namespace SuperEventFramework
                     "SuperEventFramework.ConfirmClearSaveRecords".Translate(),
                     () =>
                     {
-                        Game currentSave = SuperEventManager.CurrentSave;
-                        if (currentSave == null)
+                        if (SuperEventGameComponent.Instance == null)
                         {
                             Messages.Message("SuperEventFramework.NeedInSave".Translate(), MessageTypeDefOf.RejectInput);
                             return;
                         }
-                        var gameComp = currentSave.GetComponent<SuperEventGameComponent>();
-                        gameComp?.ClearTriggeredEvents();
+                        SuperEventGameComponent.Instance.ClearTriggeredEvents();
                         Messages.Message("SuperEventFramework.SaveRecordsCleared".Translate(), MessageTypeDefOf.NeutralEvent);
                     },
                     destructive: true
