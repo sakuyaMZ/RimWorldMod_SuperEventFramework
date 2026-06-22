@@ -3,7 +3,6 @@ using System.Reflection;
 using RimWorld;
 using Verse;
 using UnityEngine;
-using System.EnterpriseServices;
 
 namespace SuperEventFramework
 {
@@ -129,6 +128,7 @@ namespace SuperEventFramework
                             obj = obj.GetType().GetProperty("Item")?.GetValue(obj, new object[] { idx });
                         // 如果是字段，直接获取字段值
                         //BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic 表示获取实例字段，包括公共和非公共字段
+                        //走的是反射，注意，不要放到游戏局内性能敏感的地方用
                         else
                             obj = obj.GetType().GetField(parts[i],
                                 BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic)
@@ -410,10 +410,5 @@ namespace SuperEventFramework
             ModMetaData mod = ModLister.GetActiveModWithIdentifier(packageId);
             return mod?.Name ?? packageId;
         }
-
-        /// <summary>
-        /// 获取当前存档
-        /// </summary>
-        public static Game CurrentSave => Current.Game;
     }
 }

@@ -1,16 +1,16 @@
 using System.Collections.Generic;
 using Verse;
+using sakuyaMZLibs;
 
 namespace SuperEventFramework
 {
     /// <summary>
-    /// 游戏组件类，继承自GameComponent
+    /// 游戏组件类，InstanceGameComponent继承自GameComponent
     /// 用于保存每个存档的特定状态（PerSaveOnce模式）
     /// GameComponent会在存档时自动保存，读档时自动恢复
     /// </summary>
-    public class SuperEventGameComponent : GameComponent
+    public class SuperEventGameComponent : InstanceGameComponent<SuperEventGameComponent>
     {
-        public static SuperEventGameComponent Instance => SuperEventManager.CurrentSave?.GetComponent<SuperEventGameComponent>();
 
         // 当前存档中已触发的事件ID集合
         public HashSet<string> triggeredEventsPerSave = new HashSet<string>();

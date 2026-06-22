@@ -45,37 +45,13 @@ namespace SuperEventFramework
             Listing_Standard listing = new Listing_Standard();
             listing.Begin(rect);
             
-            // 全局屏蔽开关（默认勾=正常激活）
-            listing.Label("SuperEventFramework.GlobalBlocker".Translate() + ":");
-            Rect blockRowRect = listing.GetRect(30f);
-            WidgetRow blockRow = new WidgetRow(blockRowRect.x, blockRowRect.y, UIDirection.RightThenUp, blockRowRect.width);
-            blockRow.Label("SuperEventFramework.GlobalBlockerDesc".Translate(), blockRowRect.width - 40f);
-            Texture2D blockIcon = settings.globalBlocked ? Widgets.CheckboxOffTex : Widgets.CheckboxOnTex;
-            if (blockRow.ButtonIcon(blockIcon, "SuperEventFramework.ToggleGlobalBlock".Translate()))
-            {
-                SoundDefOf.Tick_Tiny.PlayOneShotOnCamera();
-                bool wasBlocked = !settings.globalBlocked;
-                settings.globalBlocked = wasBlocked;
-                if (wasBlocked)
-                    SoundDefOf.Checkbox_TurnedOff.PlayOneShotOnCamera();
-                else
-                    SoundDefOf.Checkbox_TurnedOn.PlayOneShotOnCamera();
-            }
-            listing.Gap();
+            // 全局屏蔽开关
+            bool enableEvents = !settings.globalBlocked;
+            listing.CheckboxLabeled("SuperEventFramework.GlobalBlockerDesc".Translate(), ref enableEvents, "SuperEventFramework.ToggleGlobalBlock".Translate());
+            settings.globalBlocked = !enableEvents;
             
             // BGM设置
-            Rect bgmRowRect = listing.GetRect(30f);
-            WidgetRow bgmRow = new WidgetRow(bgmRowRect.x, bgmRowRect.y, UIDirection.RightThenUp, bgmRowRect.width);
-            bgmRow.Label("SuperEventFramework.BgmText".Translate(), bgmRowRect.width - 40f);
-            Texture2D bgmIcon = settings.stopBGMOnClose ? Widgets.CheckboxOnTex : Widgets.CheckboxOffTex;
-            if (bgmRow.ButtonIcon(bgmIcon, "SuperEventFramework.StopBGMOnCloseDesc".Translate()))
-            {
-                settings.stopBGMOnClose = !settings.stopBGMOnClose;
-                if (settings.stopBGMOnClose)
-                    SoundDefOf.Checkbox_TurnedOn.PlayOneShotOnCamera();
-                else
-                    SoundDefOf.Checkbox_TurnedOff.PlayOneShotOnCamera();
-            }
+            listing.CheckboxLabeled("SuperEventFramework.BgmText".Translate(), ref settings.stopBGMOnClose, "SuperEventFramework.StopBGMOnCloseDesc".Translate());
             
             listing.Gap(12f);
             listing.GapLine();
@@ -91,12 +67,13 @@ namespace SuperEventFramework
                     "SuperEventFramework.ConfirmClearSaveRecords".Translate(),
                     () =>
                     {
-                        if (SuperEventGameComponent.Instance == null)
+                        SuperEventGameComponent superEventGameComponent = SuperEventGameComponent.Instance;
+                        if (superEventGameComponent == null)
                         {
                             Messages.Message("SuperEventFramework.NeedInSave".Translate(), MessageTypeDefOf.RejectInput);
                             return;
                         }
-                        SuperEventGameComponent.Instance.ClearTriggeredEvents();
+                        superEventGameComponent.ClearTriggeredEvents();
                         Messages.Message("SuperEventFramework.SaveRecordsCleared".Translate(), MessageTypeDefOf.NeutralEvent);
                     },
                     destructive: true
@@ -219,7 +196,7 @@ namespace SuperEventFramework
             Rect saveLabelRect = new Rect(curX, rect.y, saveLabelW, 24f);
             Widgets.Label(saveLabelRect, saveLabel);
             curX = saveLabelRect.xMax;
-            if (SuperEventManager.CurrentSave != null)
+            if (Current.Game != null)
             {
                 bool saveTriggered = SuperEventManager.HasTriggeredInSave(eventId);
                 Texture2D saveIcon = saveTriggered ? Widgets.CheckboxOnTex : Widgets.CheckboxOffTex;

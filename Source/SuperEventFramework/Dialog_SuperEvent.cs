@@ -188,11 +188,13 @@ namespace SuperEventFramework
             if (settings.stopBGMOnClose)
                 SuperEventManager.StopBGM();
             
-            if (cachedImage != null)
-            {
-                Resources.UnloadAsset(cachedImage);
-                cachedImage = null;
-            }
+            //UnloadAsset只适用于Resources.Load<T>(path)加载的，走ContentFinder加载的回自动被RimWorld框架自己管，所以界面关了就行不要手动释放
+            //if (cachedImage != null)
+            //{
+            //    Resources.UnloadAsset(cachedImage);
+            //    cachedImage = null;
+            //}
+            cachedImage = null;
         }
 
     }

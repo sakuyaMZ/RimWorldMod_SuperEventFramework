@@ -33,6 +33,7 @@ namespace SuperEventFramework
         
         /// <summary>
         /// RimWorld的存档/读档系统回调方法
+        /// 这里是mod首次加载以及关闭mod设置窗口时触发
         /// 使用Scribe系统来序列化数据
         /// </summary>
         public override void ExposeData()
